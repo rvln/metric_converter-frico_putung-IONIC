@@ -1,0 +1,61 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Metric Converter
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Metric Converter</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Convert Metric Units</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Select Category:</ion-label>
+        <ion-select [(ngModel)]="selectedCategory" (ionChange)="updateUnits()">
+          <ion-select-option value="length">Length</ion-select-option>
+          <ion-select-option value="mass">Mass</ion-select-option>
+          <ion-select-option value="time">Time</ion-select-option>
+          <ion-select-option value="electricCurrent">Electric Current</ion-select-option>
+          <ion-select-option value="temperature">Temperature</ion-select-option>
+          <ion-select-option value="luminosity">Luminosity</ion-select-option>
+          <ion-select-option value="amountOfSubstance">Amount of Substance</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Amount:</ion-label>
+        <ion-input type="number" [(ngModel)]="amount"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>From Unit:</ion-label>
+        <ion-select [(ngModel)]="fromUnit">
+          <ion-select-option *ngFor="let unit of getUnits()" [value]="unit">{{unit}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>To Unit:</ion-label>
+        <ion-select [(ngModel)]="toUnit">
+          <ion-select-option *ngFor="let unit of getUnits()" [value]="unit">{{unit}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-button expand="full" (click)="convert()">Convert</ion-button>
+
+      <ion-item>
+        <ion-label>Result:</ion-label>
+        <p>{{ result | number:'1.2-2' }}</p> <!-- Format with 2 decimal places -->
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
