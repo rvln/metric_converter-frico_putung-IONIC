@@ -4,12 +4,12 @@ Metric Converter adalah mengacu pada konversi satuan yang diberikan ke satuan ya
 
 
 ![demo-metric-converter-ezgif com-video-to-gif-converter (1)](https://github.com/user-attachments/assets/8532af3f-898f-4aef-9ac2-202b6a0e8d69)
-- Dibawah ini adalah tampilan Home yang menunjukkan keterangan
+- Diatas ini adalah tampilan Home yang menunjukkan keterangan
 
 ==============================================
 
 ![demo-metric-converter-ezgif com-video-to-gif-converter (2)](https://github.com/user-attachments/assets/49b377ae-b83b-46fe-850a-5a6d48bf1e82)
-- Dibawah ini adalah Metric Converter
+- Diatas ini adalah Metric Converter
 
 ==========================
 
